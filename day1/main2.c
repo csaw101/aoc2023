@@ -2,22 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-
-char* getFileAsString(char* fileName) {
-    FILE *stream = fopen(fileName, "r");
-
-    fseek(stream, 0, SEEK_END);
-    size_t fileSize = ftell(stream);
-
-    char *buffer = malloc(fileSize * sizeof(char) + 1);
-    buffer[fileSize] = '\0';
-
-    rewind(stream);
-    fread(buffer, 1, fileSize, stream);
-
-    fclose(stream);
-    return buffer;
-}
+#include "../boiler/getFileAsString.c"
 
 typedef struct {
     char character;

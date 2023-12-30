@@ -1,4 +1,5 @@
-.*
+Session.vim
+.ccls-cache
 
 # Prerequisites
 *.d
